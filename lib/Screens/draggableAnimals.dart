@@ -23,6 +23,8 @@ class _DraggableAnimalsState extends State<DraggableAnimals> {
          mainAxisAlignment: MainAxisAlignment.spaceAround,
          children: [
            
+           buildTargetsWaterAnimal(context),
+
            Center(child: animalWidget()),
 
            buildTargets(context),
@@ -33,11 +35,37 @@ class _DraggableAnimalsState extends State<DraggableAnimals> {
     
 
   }
-  Widget buildTargets(BuildContext context)=>buildTarget(
-      context,
-      text:'Animals',
-      acceptType:AnimalType.air,
-    );
+
+  //Water Animals
+  Widget buildTargetsWaterAnimal(BuildContext context)=>Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        buildTarget(
+          context,
+          text:'Water Animals',
+          acceptType:AnimalType.water,
+        ),
+        
+      ],
+  );
+
+
+  //Animals And Birds
+  Widget buildTargets(BuildContext context)=>Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        buildTarget(
+          context,
+          text:'Animals',
+          acceptType:AnimalType.land,
+        ),
+        buildTarget(
+          context,
+          text:'Bird',
+          acceptType:AnimalType.air,
+        ),
+      ],
+  );
 
   Widget buildTarget(
 

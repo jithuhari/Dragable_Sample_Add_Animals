@@ -1,4 +1,4 @@
-enum AnimalType { land, air }
+enum AnimalType { land, air , water }
 
 class Animal {
   final String imageUrl;
@@ -20,6 +20,14 @@ final allAnimals = [
   Animal(
     imageUrl: 'Assets/images/animals/KingFisher.png', 
     type: AnimalType.air
-    )  
+    ),
+    Animal(
+    imageUrl: 'Assets/images/animals/rhinoceros.png', 
+    type: AnimalType.land
+    ),
+    Animal(
+    imageUrl: 'Assets/images/animals/dolphin.png', 
+    type: AnimalType.water
+    )      
 
 ];
